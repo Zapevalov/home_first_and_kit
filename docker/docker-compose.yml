@@ -1,0 +1,13 @@
+# Use root/example as user/password credentials
+version: '3.1'
+services:
+
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: firstkit
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
